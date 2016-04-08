@@ -12,13 +12,19 @@
 
         <!--</activity>-->
 
+        <activity android:name=".TestCustomActivity">
 
-        <activity android:name=".messageData.MessengerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+        </activity>
+
+        <activity android:name=".messageData.MessengerActivity">
+
         </activity>
         <!--进程间的通信  属于可到导出的数据-->
         <service android:name=".messageData.MessengerService" android:process=":remote"
