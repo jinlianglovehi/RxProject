@@ -33,62 +33,62 @@ public class MainActivity extends AppCompatActivity   {
     @OnClick(R.id.btn_test)
     public void btnClick() {
 
-        final ValueAnimator animator = ValueAnimator.ofInt(1, 100);
-        animator.setDuration(5000);
-        animator.setInterpolator(new LinearInterpolator());//线性效果变化
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                Integer integer = (Integer) animator.getAnimatedValue();
-                Log.i(TAG, "onAnimationUpdate:进行中");
-                content.setText("AnimatedValue:" + integer  + "--- playTime:"+ animator.getCurrentPlayTime());
-            }
-        });
-
-        animator.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-                //动画的开始
-                Log.i(TAG, "onAnimationStart: --------------onAnimationStart-------------");
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                // 动画的结束
-                Log.i(TAG, "onAnimationEnd: --------------onAnimationEnd-------------");
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-                Log.i(TAG, "onAnimationCancel: --------------onAnimationCancel-------------");
-
-                Log.i(TAG, "onAnimationCancel: 动画的取消");
-            }
-
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-                Log.i(TAG, "onAnimationRepeat: ---------------onAnimationRepeat-----------------");
-// 动画的重复
-            }
-        });
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            animator.addPauseListener(new Animator.AnimatorPauseListener() {
-                @Override
-                public void onAnimationPause(Animator animation) {
-                    Log.i(TAG, "onAnimationPause: ********************************");
-
-                }
-
-                @Override
-                public void onAnimationResume(Animator animation) {
-                    Log.i(TAG, "onAnimationResume: ********************************");
-
-                }
-            });
-        }
+//        final ValueAnimator animator = ValueAnimator.ofInt(1, 100);
+//        animator.setDuration(5000);
+//        animator.setInterpolator(new LinearInterpolator());//线性效果变化
+//        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+//            @Override
+//            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+//                Integer integer = (Integer) animator.getAnimatedValue();
+//                Log.i(TAG, "onAnimationUpdate:进行中");
+//                content.setText("AnimatedValue:" + integer  + "--- playTime:"+ animator.getCurrentPlayTime());
+//            }
+//        });
+//
+//        animator.addListener(new Animator.AnimatorListener() {
+//            @Override
+//            public void onAnimationStart(Animator animation) {
+//
+//                //动画的开始
+//                Log.i(TAG, "onAnimationStart: --------------onAnimationStart-------------");
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animator animation) {
+//                // 动画的结束
+//                Log.i(TAG, "onAnimationEnd: --------------onAnimationEnd-------------");
+//            }
+//
+//            @Override
+//            public void onAnimationCancel(Animator animation) {
+//                Log.i(TAG, "onAnimationCancel: --------------onAnimationCancel-------------");
+//
+//                Log.i(TAG, "onAnimationCancel: 动画的取消");
+//            }
+//
+//
+//            @Override
+//            public void onAnimationRepeat(Animator animation) {
+//                Log.i(TAG, "onAnimationRepeat: ---------------onAnimationRepeat-----------------");
+//// 动画的重复
+//            }
+//        });
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            animator.addPauseListener(new Animator.AnimatorPauseListener() {
+//                @Override
+//                public void onAnimationPause(Animator animation) {
+//                    Log.i(TAG, "onAnimationPause: ********************************");
+//
+//                }
+//
+//                @Override
+//                public void onAnimationResume(Animator animation) {
+//                    Log.i(TAG, "onAnimationResume: ********************************");
+//
+//                }
+//            });
+//        }
 //        animator.start();
 
 
